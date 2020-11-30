@@ -8,13 +8,12 @@ from time import sleep
 
 def try_me():
     print("This package is awesome !!!")
-    sleep(1)
     print("And completely useless...")
-    sleep(1)
     print("But you can play rock/paper/scissors:")
     move_list = ['R', 'P', 'S']
     while True:
         move = input("Choose a move: R/P/S/E(xit): ").upper()
+        sleep(1)
         if move in move_list:
             print('Your move: '+move)
             c_move = random.choice(move_list)
