@@ -7,3 +7,5 @@ import Awesome_package
 from Awesome_package.lib import try_me
 import pytest
 
+def test_empry():
+    assert True == True
