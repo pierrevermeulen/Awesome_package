@@ -4,11 +4,10 @@
 # Import from the standard library
 from os.path import split
 import argparse
-import pandas as pd
 
 # Import from Awesome_package
 import Awesome_package
-from Awesome_package.lib import clean_data
+from Awesome_package.lib import try_me
 
 if __name__ == '__main__':
     usage = '%(prog)s'
@@ -18,10 +17,4 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=description, usage=usage)
     args = parser.parse_args()
     folder_source, _ = split(Awesome_package.__file__)
-    df = pd.read_csv('{}/data/data.csv.gz'.format(folder_source))
-    print('  Awesome_package/data/data.csv.gz Loaded')
-
-    res = clean_data(df)
-    res.to_csv('out.csv', index=False)
-    print('==> out.csv MADE ')
-    print('    shape is {}'.format(res.shape))
+    try_me()
