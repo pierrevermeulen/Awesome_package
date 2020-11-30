@@ -14,7 +14,7 @@ def try_me():
     print("But you can play rock/paper/scissors:")
     move_list = ['R', 'P', 'S']
     while True:
-        move = input("Choose a move: R/P/S/E(xit): ")
+        move = input("Choose a move: R/P/S/E(xit): ").upper()
         if move in move_list:
             print('Your move: '+move)
             c_move = random.choice(move_list)
